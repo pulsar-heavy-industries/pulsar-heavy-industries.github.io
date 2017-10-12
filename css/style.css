@@ -2,11 +2,16 @@
 BOOTSTRAP RESET
 ========================================================================== */
 
-html{
+html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body{
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Oswald', sans-serif !important;
+}
+
+button, input, outgroup, select {
     -webkit-font-smoothing: antialiased;
     font-family: 'Oswald', sans-serif !important;
 }
@@ -18,14 +23,14 @@ CSS
 
 /* ---- base ---- */
 
-html,body{
+html, body {
     background: #fff;
     box-sizing: border-box;
     height: 100%;
     width: 100%;
 }
 
-canvas{
+canvas {
     display:block;
     vertical-align:bottom;
 }
@@ -47,17 +52,17 @@ p {
     line-height: 1.8;
 }
 
+
  /* ----- Header ----- */
 
 .Hero {
-    height: 700px;
+    height: auto;
     position: relative;
     width: 100%;
 }
 
 .Hero-content {
-    height: 100%;
-    position: absolute;
+    position: relative;
     width: 100%;
     z-index: 400;
 }
@@ -67,7 +72,6 @@ p {
     background-repeat: no-repeat;
     background: linear-gradient(to bottom right, #2D1345, #771522, #2D1345 );bottom: 0;
     bottom: 100px;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     left: 0;
     position: absolute;
     right: 0;
@@ -77,6 +81,12 @@ p {
 
 .Hero-header {
     height: 100px;
+}
+
+.Hero-header button {
+    border-color: #fff;
+    color: #fff;
+    cursor: pointer;
 }
 
 .Hero-title {
@@ -173,6 +183,52 @@ p {
 
 .Phi-symbol {
     fill: #fff;
+}
+
+
+/* ----- Sections ----- */
+.Section-title {
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.Section-subtitle {
+    color: rgba(0, 0, 0, 1);
+    font-size: 20px;
+}
+
+.Section-text {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.Section-copy {
+    width: 240px;
+}
+
+
+
+/* ----- Modular ----- */
+.Modular {
+    background: #171717;
+}
+
+.Modular-title {
+    color: rgba(255, 255, 255, 1);
+    font-size: 24px;
+}
+
+.Modular-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.Modular-caption {
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
 }
 
 
