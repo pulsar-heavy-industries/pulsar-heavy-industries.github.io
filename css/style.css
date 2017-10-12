@@ -35,18 +35,6 @@ canvas {
     vertical-align:bottom;
 }
 
-a {
-    border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
-    color: #c4dff7;
-    font-size: 16px;
-    text-decoration: none;
-    transition: border 0.25s ease-in;
-}
-
-a:hover {
-    border-bottom: dotted 1px rgba(255, 255, 255, 0);
-}
-
 p {
     font-weight: 300 !important;
     line-height: 1.8;
@@ -77,6 +65,10 @@ p {
     right: 0;
     top: 0;
     z-index: 100;
+}
+
+.Hero-backgroundWrapper {
+    position: relative;
 }
 
 .Hero-header {
@@ -123,39 +115,79 @@ p {
 .Hero-clouds {
     bottom: 0;
     left: 0;
+    overflow: hidden;
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 600;
 }
 
 .Hero-cloud {
     background-color: transparent;
-    background-size: cover;
-    height: 100%;
+    background-size: 100%;
     opacity: 0.5;
     position: absolute;
-    width: 100%;
-    z-index: 200;
+    left: -10%;
+    right: -10%;
+    top: -10%;
+    bottom: -10%;
+    z-index: 600;
 }
 
-.Herocloud--1 {
+.Hero-cloud--1 {
+    animation-name: clouds;
+    animation-duration: 22.3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
     background-image: url(../img/cloud-1.png);
 }
 
-.Herocloud--2 {
+.Hero-cloud--2 {
+    animation-name: clouds-reverse;
+    animation-duration: 27.4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
     background-image: url(../img/cloud-2.png);
 }
 
-.Herocloud--3 {
+.Hero-cloud--3 {
+    animation-name: clouds;
+    animation-duration: 28.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
     background-image: url(../img/cloud-3.png);
 }
 
-.Herocloud--4 {
+.Hero-cloud--4 {
+    animation-name: clouds-reverse;
+    animation-duration: 29.3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
     background-image: url(../img/cloud-4.png);
 }
 
-.Herocloud--5 {
+.Hero-cloud--5 {
+    animation-name: clouds;
+    animation-duration: 25.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
     background-image: url(../img/cloud-5.png);
+}
+
+@keyframes clouds {
+    0% {transform: translate(0, 0)}
+    25% {transform: translate(5%, 1%)}
+    50% {transform: translate(4%, 5%)}
+    75% {transform: translate(2%, 6%)}
+    100% {transform: translate(0, 0)}
+}
+
+@keyframes clouds-reverse {
+    0% {transform: translate(0, 0)}
+    25% {transform: translate(-2%, -3%)}
+    50% {transform: translate(-6%, -5%)}
+    75% {transform: translate(-5%, 2%)}
+    100% {transform: translate(0, 0)}
 }
 
 .Hero-particles{
@@ -234,26 +266,16 @@ p {
 
 /* ---- content ---- */
 
-.Newsletter {
-    align-items: center;
-    background: #111111;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    position: absolute;
+.Footer {
+    background: #171717;
+    min-height: 100px;
     width: 100%;
-    z-index: 500;
 }
 
-.Newsletter-wrapper {
-    align-items: center;
-    background: #050505;
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    padding: 100px 0;
-    width: 100%;
+.Footer-phi {
+    margin-top: 5px;
+    max-width: 250px;
+    width: 50px;
 }
 
 .Newsletter-subheader {
@@ -265,7 +287,7 @@ p {
 
 .Newsletter-input {
     -webkit-appearance: none;
-    background: #111111;
+    background: #171717;
     border: rgba(255,255,255, 0.2);
     box-shadow: none;
     color: white;
