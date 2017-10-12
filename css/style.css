@@ -234,7 +234,7 @@ p {
 
 /* ---- content ---- */
 
-.content {
+.Newsletter {
     align-items: center;
     background: #111111;
     display: flex;
@@ -246,36 +246,7 @@ p {
     z-index: 500;
 }
 
-.info-wrapper {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: center;
-    padding: 100px 0;
-    width: 600px;
-}
-
-.info-header {
-    color: #6d6d6d;
-    font-size: 40px;
-    letter-spacing: 6px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.info-subheader {
-    margin-top: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #6d6d6d;
-}
-
-.info-subheader a{
-    color: #6d6d6d;
-}
-
-.newsletter-wrapper {
+.Newsletter-wrapper {
     align-items: center;
     background: #050505;
     display: flex;
@@ -285,14 +256,14 @@ p {
     width: 100%;
 }
 
-.newsletter-subheader {
+.Newsletter-subheader {
     color: #6d6d6d;
     margin-bottom: 20px;
     text-align: center;
     text-transform: uppercase;
 }
 
-.newsletter-input {
+.Newsletter-input {
     -webkit-appearance: none;
     background: #111111;
     border: rgba(255,255,255, 0.2);
@@ -307,7 +278,7 @@ p {
     width: 300px;
 }
 
-.newsletter-button {
+.Newsletter-button {
     -webkit-appearance: none;
     background: #6d6d6d;
     border: 0;
@@ -321,7 +292,7 @@ p {
     width: 50px;
 }
 
-.newsletter-button:hover {
+.Newsletter-button:hover {
     background: #111111;
     color: #6D6D6D;
     transition: all 0.25s ease-in;
