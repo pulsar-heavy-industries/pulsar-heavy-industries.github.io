@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" media="screen" href="css/library/bootstrap.min.css">
     <link rel="stylesheet" media="screen" href="css/style.css">
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300, 400, 500" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -46,8 +45,7 @@
             <div class="container">
                 <div class="d-flex justify-content-center align-items-center align-content-center">
                     <div
-                        class="Hero-title d-flex flex-column align-items-end justify-content-center align-self-center pb-4 rellax"
-                        data-rellax-speed="6"
+                        class="Hero-title d-flex flex-column align-items-end justify-content-center align-self-center pb-4"
                     >
                         <h1 class="mb-0">Cenx4</h1>
                         <p class="pr-2">Arriving Soon</p>
@@ -56,11 +54,13 @@
             </div>
             <div class="container">
                 <div
-                    class="Hero-values row p-4 rellax"
-                    data-rellax-speed="2"
+                    class="Hero-values row p-4"
                 >
                     <div class="col col-md-4 col-12 p-4">
-                        <img src="#" alt=""/>
+                        <img
+                            alt="Ableton Icon"
+                            src="img/ableton.svg"
+                        />
                         <h3 class="pb-2">
                             Ableton Ready
                         </h3>
@@ -70,25 +70,28 @@
                         </p>
                     </div>
                     <div class="col col-md-4 col-12 p-4">
-                        <img src="#" alt=""/>
+                        <img
+                            alt="Open Source Icon"
+                            src="img/open-source.svg"
+                        />
                         <h3 class="pb-2">
                             Open Source
                         </h3>
                         <p>
                             Everything about the Cenx4 is open source. The firmware, hardware, web control/update application and Ableton remote script.
-                            A feature you want is not available? Want to use Cenx4 to control other software? If you're comfortable with coding, you can do anything you want.
+                            Want a new feature? If you're comfortable with coding, you can do anything you want.
                         </p>
                     </div>
                     <div class="col col-md-4 col-12 p-4">
                         <img
-                            alt=""
-                            src="#"
+                            alt="Midi Icon"
+                            src="img/midi.svg"
                         />
                         <h3 class="pb-2">
                             Midi Standard
                         </h3>
                         <p>
-                            Cenx4 uses standard MIDI over USB. No need for any special drivers. Encoders transmit standard MIDI CC messages. The OLED displays can be controlled via SysEx messages.
+                            Cenx4 uses standard MIDI over USB. No need for any special drivers. Encoders transmit standard MIDI CC messages and the OLED displays are controlled via SysEx messages.
                         </p>
                     </div>
                 </div>
@@ -127,34 +130,34 @@
     <div class="container py-5 my-5">
         <div class="row">
             <div class="col col-12 col-sm-6 d-flex justify-content-center flex-align-center">
-                <div class="Section-copy">
+                <div class="Section-copy d-flex justify-content-center flex-column flex-align-center">
                     <div class="Section-title mb-4">
                         The Body
                     </div>
-                    <div class="Section-subtitle mb-1">
+                    <div class="Section-subtitle mb-1 pt-2">
                         OLED displays
                     </div>
                     <div class="Section-text mb-4">
-                        A single Cenx4 module has two OLED display modules, each having a 128x64 resolution.
+                        A single Cenx4 module has two OLED display modules, each with a 128x64 resolution.
                     </div>
-                    <div class="Section-subtitle mb-1">
+                    <div class="Section-subtitle mb-1 pt-2">
                         24-Click Rotary Encoders
                     </div>
                     <div class="Section-text mb-4">
-                        Cenx4 has four 24 detents encoders, that also act as a push-button.
+                        The Cenx4 has four 24 detents encoders that also act as push-buttons.
                     </div>
-                    <div class="Section-subtitle mb-1">
+                    <div class="Section-subtitle mb-1 pt-2">
                         USB Connection
                     </div>
                     <div class="Section-text mb-4">
-                        Cenx4 connects to your computer using a standard USB B cable.
+                        Connect your Cenx4 to your computer using a standard USB B cable.
                     </div>
                 </div>
             </div>
-            <div class="col col-12 col-sm-6">
+            <div class="col col-12 col-sm-6 p-4">
                 <img
-                    class="Section-image"
-                    src="#"
+                    class="Section-image flex-grow-0 p-4 img-fluid"
+                    src="img/front.jpg"
                 />
             </div>
         </div>
@@ -163,41 +166,41 @@
     <!-- Front -->
     <div class="container py-5 my-5">
         <div class="row">
-            <div class="col col-12 col-sm-pull-6 col-sm-6">
-                <img
-                    class="Section-image"
-                    src="#"
-                />
-            </div>
-            <div class="col col-12 col-sm-push-6 col-sm-6 d-flex justify-content-center flex-align-center">
-                <div class="Section-copy">
+            <div class="col col-12 order-sm-2 col-sm-6 d-flex justify-content-center flex-align-center">
+                <div class="Section-copy d-flex justify-content-center flex-column flex-align-center">
                     <div class="Section-title mb-4">
                         The Guts
                     </div>
-                    <div class="Section-subtitle mb-1">
+                    <div class="Section-subtitle mb-1 pt-2">
                         Cortex M4 MCU
                     </div>
                     <div class="Section-text mb-4">
-                        Each Cenx4 uses a powerful STM32F303 Cortex M4 processor running at 72MHz and havig 40KB of SRAM. If you want to customize your Cenx4, you have plenty of hardware resources to do so!
+                        Each Cenx4 uses a powerful STM32F303 Cortex M4 processor running at 72MHz with 40KB of SRAM. You'll have plenty of hardware resources to customize your Cenx4 however you want!
                     </div>
-                    <div class="Section-subtitle mb-1">
+                    <div class="Section-subtitle mb-1 pt-2">
                         2MB Serial Flash
                     </div>
                     <div class="Section-text mb-4">
-                        An auxilary 2MB SPI flash is available for storing custom configurations, bitmaps, alternative firmwares, etc.
+                        An auxilary 2MB SPI flash is included for storing custom configurations, bitmaps, alternative firmwares, etc.
                     </div>
-                    <div class="Section-subtitle mb-1">
+                    <div class="Section-subtitle mb-1 pt-2">
                         CAN Bus Protcol
                     </div>
                     <div class="Section-text mb-4">
-                        Cenx4 modules network together using a robust CAN Bus protocol. Cenx4s can be daisy changed together to increase the number of available knobs/screens. In the future, they could link to other modules.
+                        Cenx4 modules network together using a robust CAN Bus protocol. Daisy chain multiple Cenx4 together for more control. You can even use it as a way to connect to other devices.
                     </div>
                 </div>
+            </div>
+            <div class="col col-12 order-sm-1 col-sm-6">
+                <img
+                    class="Section-image p-4 img-fluid"
+                    src="img/back.jpg"
+                />
             </div>
         </div>
     </div>
 
-    <div class="Modular my-5 py-5">
+    <div class="Modular mb-5 py-5">
         <div class="container">
             <div class="Modular-title pt-5 mb-2 text-center">
                 Modular Design
@@ -205,29 +208,29 @@
             <div class="Modular-subtitle pb-5 text-center">
                 Modular designs makes it possible to build in any configuration. Want more encoders? Just chain more Cenx4s together.
             </div>
-            <div class="row pb-5">
-                <div class="col col-4 col-sm-2 d-flex flex-column align-items-center justify-content-center">
+            <div class="d-flex justify-content-center flex-sm-row flex-column pb-5">
+                <div class="d-flex flex-column align-items-center justify-content-center mx-3">
                     <img
                         class="Modular-image"
-                        src="#"
+                        src="img/4.svg"
                     />
                     <div class="Modular-caption">
                         Cenx4
                     </div>
                 </div>
-                <div class="col-8 col-sm-4 d-flex flex-column align-items-center justify-content-center">
+                <div class="d-flex flex-column align-items-center justify-content-center mx-3">
                     <img
                         class="Modular-image"
-                        src="#"
+                        src="img/8.svg"
                     />
                     <div class="Modular-caption">
                         Cenx4<sup>2</sup>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 d-flex flex-column align-items-center justify-content-center">
+                <div class="d-flex flex-column align-items-center justify-content-center mx-3">
                     <img
                         class="Modular-image"
-                        src="#"
+                        src="img/16.svg"
                     />
                     <div class="Modular-caption">
                         Cenx4<sup>3</sup>
@@ -242,12 +245,12 @@
         <div class="row">
             <div class="col col-12 col-sm-pull-6 col-sm-6">
                 <img
-                    class="Section-image"
-                    src="#"
+                    class="Section-image img-fluid"
+                    src="img/side.jpg"
                 />
             </div>
             <div class="col col-12 col-sm-push-6 col-sm-6 d-flex justify-content-center flex-align-center">
-                <div class="Section-copy">
+                <div class="Section-copy d-flex justify-content-center flex-align-center flex-column">
                     <div class="Section-subtitle mb-1">
                         Preorder a Device
                     </div>
@@ -281,58 +284,17 @@
                         </svg>
                     </div>
                     <a
-                        class="text-light ml-3"
-                        href="#"
+                        class="text-light ml-4"
+                        href="http://rundste.in/tag/phi/"
                     >
                         Learn More
                     </a>
                     <a
                         class="text-light ml-3"
-                        href="#"
+                        href="https://github.com/pulsar-heavy-industries/phi/"
                     >
                         Github
                     </a>
-                </div>
-                <div class="col col-12 col-sm-6 d-none d-sm-flex align-items-center justify-content-end">
-                    <form
-                        action="//keves.us7.list-manage.com/subscribe/post?u=75910423279fe7c68f4ce0da9&amp;id=1b20bcc76c"
-                        class="validate"
-                        id="mc-embedded-subscribe-form"
-                        method="post"
-                        name="mc-embedded-subscribe-form"
-                        novalidate
-                        target="_blank"
-                    >
-                        <input
-                            class="Newsletter-input"
-                            id="mce-EMAIL"
-                            name="EMAIL"
-                            placeholder="email address"
-                            required
-                            style="width: 200px; vertical-align: middle;"
-                            type="email"
-                            value=""
-                        >
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div
-                            aria-hidden="true"
-                            style="position: absolute; left: -5000px;"
-                        >
-                                <input
-                                    name="b_75910423279fe7c68f4ce0da9_1b20bcc76c"
-                                    tabindex="-1"
-                                    type="text"
-                                    value=""
-                                >
-                        </div>
-                        <input
-                            class="Newsletter-button"
-                            id="mc-embedded-subscribe"
-                            name="subscribe"
-                            type="submit"
-                            value="Φ"
-                        />
-                    </form>
                 </div>
             </div>
         </div>
@@ -373,44 +335,39 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div>
-                            We are happy to see you are interested in this project! This project is in it's early stages and we are still guaging interest. As such, we do not ask for payment details or commitment of any sort. We just want to get a feel of how many modules you would like to buy. Based on how many people show interest, we can figure out which manufacturing strategy would work best in order to make the Cenx4 as affordable as possilble.
-                        </div>
-
-                        <br>
+                        <p>
+                            We are happy to see you are interested in this project! This project is in it's early stages and we are still guaging interest. As such, we do not ask for payment details or commitment of any sort. We just want to get a feel of how many modules you would like to buy. Based on total interest, we can figure out which manufacturing strategy would work best in order to make the Cenx4 as affordable as possilble.
+                        </p>
 
                         <!-- Begin MailChimp Signup Form -->
                         <div id="mc_embed_signup">
-                            <div id="mc_embed_signup_scroll">
-                                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-                                <div class="mc-field-group">
-                                    <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
-                                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                                </div>
-                                <div class="mc-field-group">
-                                    <label for="mce-MERGE1">Full Name </label>
-                                    <input type="text" value="" name="MERGE1" class="" id="mce-MERGE1">
-                                </div>
-                                <div class="mc-field-group">
-                                    <label for="mce-MMERGE2">Which configuration are you most interested in? </label>
-                                    <select name="MMERGE2" class="" id="mce-MMERGE2">
-                                        <option value=""></option>
-                                        <option value="Single Cenx4 (4 knobs)">Single Cenx4 (4 knobs)</option>
-                                        <option value="Dual Cenx4 (8 knobs)">Dual Cenx4 (8 knobs)</option>
-                                        <option value="Triple Cenx4 (12 knobs)">Triple Cenx4 (12 knobs)</option>
-                                        <option value="Quad Cenx4 (16 knobs)">Quad Cenx4 (16 knobs)</option>
-                                    </select>
-                                </div>
-                                <div class="mc-field-group">
-                                    <label for="mce-MMERGE3">Country </label>
-                                    <input type="text" value="" name="MMERGE3" class="" id="mce-MMERGE3">
-                                </div>
-                                <div id="mce-responses" class="clear">
-                                    <div class="response" id="mce-error-response" style="display:none"></div>
-                                    <div class="response" id="mce-success-response" style="display:none"></div>
-                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_75910423279fe7c68f4ce0da9_9abb54b8d9" tabindex="-1" value=""></div>
+                            <div class="form-group">
+                                <label for="mce-EMAIL">Email Address *</label>
+                                <input type="email" name="EMAIL" class="form-control required" id="mce-EMAIL" value=""  placeholder="Email">
                             </div>
+                            <div class="form-group">
+                                <label for="mce-MERGE1">Full Name</label>
+                                <input type="text" value="" name="MERGE1" class="form-control" id="mce-MERGE1"  placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="mce-MMERGE2">Which configuration are you most interested in? </label>
+                                <select name="MMERGE2" class="form-control custom-select" id="mce-MMERGE2">
+                                    <option value=""></option>
+                                    <option value="Single Cenx4 (4 knobs)">Single Cenx4 (4 knobs)</option>
+                                    <option value="Dual Cenx4 (8 knobs)">Dual Cenx4 (8 knobs)</option>
+                                    <option value="Triple Cenx4 (12 knobs)">Triple Cenx4 (12 knobs)</option>
+                                    <option value="Quad Cenx4 (16 knobs)">Quad Cenx4 (16 knobs)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="mce-MERGE3">Country</label>
+                                <input type="text" value="" name="MERGE3" class="form-control" id="mce-MERGE1"  placeholder="Country">
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_75910423279fe7c68f4ce0da9_9abb54b8d9" tabindex="-1" value=""></div>
                         </div>
                         <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='MERGE1';ftypes[1]='text';fnames[2]='MMERGE2';ftypes[2]='dropdown';fnames[3]='MMERGE3';ftypes[3]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
                         <!--End mc_embed_signup-->

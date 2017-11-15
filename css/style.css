@@ -31,8 +31,8 @@ html, body {
 }
 
 canvas {
-    display:block;
-    vertical-align:bottom;
+    display: block;
+    vertical-align: bottom;
 }
 
 p {
@@ -58,7 +58,7 @@ p {
 .Hero-background {
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background: linear-gradient(to bottom right, #2D1345, #771522, #2D1345 );bottom: 0;
+    background: linear-gradient(to bottom right, #03325C, #BD0000, #03325C );bottom: 0;
     bottom: 0;
     left: 0;
     max-height: 80%;
@@ -125,6 +125,13 @@ p {
     color: rgba(255, 255, 255, 0.8);
 }
 
+.Hero-values img {
+    width: 100px;
+    position: relative;
+    left: -5px;
+    margin-bottom: 15px;
+}
+
 .Hero-clouds {
     bottom: 0;
     left: 0;
@@ -138,7 +145,7 @@ p {
 .Hero-cloud {
     background-color: transparent;
     background-size: 100%;
-    opacity: 0.5;
+    opacity: 0.8;
     position: absolute;
     left: -10%;
     right: -10%;
@@ -253,17 +260,17 @@ p {
     color: rgba(0, 0, 0, 0.8);
     font-size: 16px;
     font-weight: 300;
+    line-height: 1.8;
 }
 
 .Section-copy {
     width: 240px;
 }
 
-
-
 /* ----- Modular ----- */
 .Modular {
     background: #171717;
+    margin-top: 100px;
 }
 
 .Modular-title {
@@ -280,6 +287,11 @@ p {
 .Modular-caption {
     color: rgba(255, 255, 255, 1);
     font-size: 16px;
+}
+
+.Modular-image {
+    height: 80px;
+    margin-bottom: 15px;
 }
 
 
