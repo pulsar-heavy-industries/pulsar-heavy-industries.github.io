@@ -59,12 +59,25 @@ p {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background: linear-gradient(to bottom right, #2D1345, #771522, #2D1345 );bottom: 0;
-    bottom: 100px;
+    bottom: 0;
     left: 0;
+    max-height: 80%;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 100;
+}
+
+@media (max-width: 769px) {
+    .Hero-background {
+        max-height: 50%;
+    }
+}
+
+@media (max-width: 577px) {
+    .Hero-background {
+        max-height: 50%;
+    }
 }
 
 .Hero-backgroundWrapper {
@@ -132,6 +145,12 @@ p {
     top: -10%;
     bottom: -10%;
     z-index: 600;
+}
+
+@media (max-width: 993px) {
+    .Hero-cloud  {
+        background-size: 200%;
+    }
 }
 
 .Hero-cloud--1 {
