@@ -354,3 +354,8 @@ p {
 ::-webkit-input-placeholder {
     color: #6d6d6d;
 }
+
+/* ---- mailchimp form ---- */
+#mce-success-response {
+    font-size: 28px;
+}
