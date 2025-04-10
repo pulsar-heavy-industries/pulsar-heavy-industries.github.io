@@ -1,10 +1,554 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulsar Heavy Industries</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto+Mono&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      background-color: #141414;
+      color: #f0f0f0;
+      font-family: 'Roboto Mono', monospace;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+      border-bottom: 1px solid #333;
+    }
+
+    header img {
+      max-width: 250px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      font-weight: normal;
+      color: #ccc;
+    }
+
+    h3 {
+      color: #d18642;
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    a,
+    a:visited {
+      color: #0097f0;
+      text-decoration: none;
+    }
+
+
+    .blurb {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #aaa;
+      margin-bottom: 3rem;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .capabilities {
+      margin-bottom: 3rem;
+    }
+
+    .capability-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .capability-title {
+      font-weight: bold;
+      color: #f0f0f0;
+      margin-bottom: 0.3rem;
+    }
+
+    .capability-desc {
+      color: #ccc;
+      padding-left: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+
+    .tech-badge {
+      background-color: #222;
+      border: 1px solid #444;
+      padding: 0.3rem 0.8rem;
+      border-radius: 3px;
+      font-size: 0.9rem;
+    }
+
+    .case-studies {
+      display: grid;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .case-study {
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      border-left: 4px solid #d18642;
+    }
+
+    .case-study h4 {
+      margin-top: 0;
+      color: #f0f0f0;
+    }
+
+    .case-result {
+      color: #d18642;
+      font-weight: bold;
+    }
+
+    .testimonials {
+      margin: 2rem 0;
+    }
+
+    .testimonial {
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #444;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonial-source {
+      text-align: right;
+      color: #ccc;
+    }
+
+    .process-steps {
+      counter-reset: process-counter;
+      margin: 2rem 0;
+    }
+
+    .process-step {
+      margin-bottom: 1.5rem;
+      padding-left: 3rem;
+      position: relative;
+    }
+
+    .process-step:before {
+      counter-increment: process-counter;
+      content: counter(process-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #d18642;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .engagement-models {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    @media (min-width: 600px) {
+      .engagement-models {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .engagement-model {
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      border-top: 3px solid #d18642;
+    }
+
+    .social-proof {
+      display: flex;
+      gap: 1rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+
+    .social-link, .social-link:visited {
+      color: #d18642;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid #d18642;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background-color: #d18642;
+      color: #141414;
+    }
+
+    .contact-section {
+      text-align: center;
+      background-color: #1a1a1a;
+      padding: 3rem 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .contact-cta {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-email {
+      color: #d18642;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-bottom: 1px dotted #d18642;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 3rem 1rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .blurb {
+        font-size: 1rem;
+      }
+    }
+
+    .name-origin {
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 4rem;
+      padding: 1.5rem;
+      background-color: #1a1a1a;
+      border-top: 1px solid #333;
+      line-height: 1.5;
+    }
+
+    .name-origin h4 {
+      margin-top: 0;
+      color: #aaa;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
+
 <body>
-    Our website is currently under maintenance. Please check back later or email us at info @ pulsarheavyindustries.com
-    <br>
-    We appologize for the inconvenience. 
+
+  <header>
+    <img src="assets/logo-small.png" alt="Pulsar Heavy Industries Logo">
+    <h1>Pulsar Heavy Industries</h1>
+  </header>
+
+  <section>
+    <p class="blurb">
+      Pulsar Heavy Industries delivers robust, scalable software that powers backend systems, embedded devices, and
+      decentralized infrastructure. With two decades of experience spanning blockchain protocols, financial systems, and
+      bare-metal code, PHI builds technical foundations designed to endure—whether you're deploying smart contracts,
+      shipping firmware, or building resilient cloud systems.
+    </p>
+
+    <!-- <p class="tagline">
+      I build robust, maintainable software that drives real business value, engineered with precision and industrial
+      strength.
+    </p> -->
+
+    <div class="capabilities">
+      <h3>Core Capabilities</h3>
+
+      <div class="capability-item">
+        <div class="capability-title">Backend Systems Architecture & Implementation</div>
+        <div class="capability-desc">API architecture design, service optimization, database design and scaling,
+          distributed
+          systems, high-throughput processing</div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-title">Embedded Software Development</div>
+        <div class="capability-desc">Firmware design, embedded Linux BSPs, device drivers, memory optimization, Intel
+          SGX
+          implementation</div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-title">Decentralized Protocols & Blockchain Engineering</div>
+        <div class="capability-desc">EVM integrations, smart contract development, private transaction systems, wallet
+          integration, web3 frontend applications</div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-title">Performance Optimization & Low-Level Systems</div>
+        <div class="capability-desc">Transaction throughput scaling, distributed tracing, bottleneck identification,
+          latency reduction</div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-title">Technical Discovery & Prototyping</div>
+        <div class="capability-desc">Architecture audits, proof-of-concept development, system refactoring, technical
+          roadmap planning</div>
+      </div>
+    </div>
+
+    <div class="founder-block">
+      <h3>About the Founder</h3>
+      <p>
+        I'm <strong>Eran Rundstein</strong>, a principal-level software engineer with two decades of experience spanning
+        blockchain, embedded systems, and financial infrastructure. My career includes leadership roles at <a
+          href="https://sentz.com" target="_blank">Sentz (f.k.a Mobilecoin)</a>,
+        where I architected privacy-preserving blockchain infrastructure used by millions, and at <a
+          href="https://fundersclub.com/" target="_blank">FundersClub</a>, where I
+        built financial software transacting and managing millions of dollars in assets.
+      </p>
+      <p>
+        Pulsar Heavy Industries is how I bring that experience to bear—independently delivering robust technical
+        solutions with craftsmanship and clarity.
+      </p>
+    </div>
+
+    <div class="social-proof">
+      <a href="https://github.com/eranrund" class="social-link" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/eran-rundstein/" class="social-link" target="_blank">LinkedIn</a>
+      <a href="https://blog.rundste.in/" class="social-link" target="_blank">Blog</a>
+    </div>
+
+    <div class="reassurance-block">
+      <h3>How I Work</h3>
+      <p>
+        PHI is a solo consultancy. I work transparently—shared repositories, weekly updates, async-friendly
+        communication, and direct access via Slack or Signal. I integrate cleanly into technical teams and am
+        comfortable leading initiatives, working async, and pairing with existing engineers. I am based in the Bay Area.
+      </p>
+      <p>
+        I've shipped for teams as small as two and as large as fifty, and I know how to plug in without creating
+        drag. My code is written for clarity and longevity with extra care given to logging, observability, and testing.
+      </p>
+      <p>
+        If your project ever needs broader firepower, I'm well-networked with senior engineers I trust.
+      </p>
+    </div>
+
+
+    <!--
+    <h3>Technical Stack</h3>
+    <div class="tech-stack">
+      <span class="tech-badge">Rust</span>
+      <span class="tech-badge">Solidity</span>
+      <span class="tech-badge">C</span>
+      <span class="tech-badge">Linux</span>
+      <span class="tech-badge">Distributed Systems</span>
+      <span class="tech-badge">EVM</span>
+      <span class="tech-badge">OpenTelemetry</span>
+      <span class="tech-badge">Intel SGX</span>
+      <span class="tech-badge">ARM</span>
+      <span class="tech-badge">Embedded Linux</span>
+    </div>
+    -->
+
+    <h3>Portfolio Highlights</h3>
+    <div class="case-studies">
+      <div class="case-study">
+        <h4>Privacy-Preserving Mobile Payments</h4>
+        <p>
+        <ul>
+          <li>Developed non-custodial token swapping service leveraging Intel SGX for a
+            <a href="https://sentz.com" target="_blank">privacy-focused payment network</a> used by
+            <a href="https://signal.org/" target="_blank">Signal</a>.
+          </li>
+          <li>Significantly increased transaction throughput and concurrent mobile client support</li>
+          <li>Improved ledger sync speed</li>
+        </ul>
+        A lot of this work is <a href="https://github.com/mobilecoinfoundation/mobilecoin" target="_blank">open
+          source</a>.
+        </p>
+        <p class="case-result">
+          Results:
+        <ul>
+          <li>Improved mobile transaction success rates from ~50% to nearly 100%</li>
+          <li>Took transaction throughput from single digits to 50+ tx/s</li>
+          <li>x25-x50 speed up in ledger syncing on non-mobile clients</li>
+        </ul>
+        </p>
+      </div>
+
+      <div class="case-study">
+        <h4>Fiat Payments</h4>
+        <p>Built and scaled a robust ACH/wire payments system for <a href="https://www.fundersclub.com/"
+            target="_blank">FundersClub</a>.</p>
+        <p class="case-result">Result: $30MM+ in annual transaction volume, >99.97% uptime, flawless security record</p>
+      </div>
+
+      <div class="case-study">
+        <h4>Blockchain Integration Infrastructure</h4>
+        <p>Architected and implemented Ethereum/EVM blockchain integration enabling secure transactions for a
+          digital asset trading platform.</p>
+        <p class="case-result">Result: $5MM+ in successful transaction volume</p>
+      </div>
+
+      <div class="case-study">
+        <h4>Smart Contract Development</h4>
+        <p>Led smart contract development for a new ERC-20 token offering, focusing on security and compliance.</p>
+        <p class="case-result">Result: Clean <a href="https://www.trailofbits.com/" target="_blank">Trail-of-Bits</a>
+          security audit with no high or medium-risk issues</p>
+      </div>
+
+    </div>
+
+    <!-- <h3>Client Testimonials</h3>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p class="testimonial-text">"Eran's deep technical expertise was invaluable in solving our complex blockchain
+          integration challenges. He delivered robust solutions that far exceeded our expectations."</p>
+        <p class="testimonial-source">— [Former Client Name], [Position at Company]</p>
+      </div>
+
+      <div class="testimonial">
+        <p class="testimonial-text">"Working with Pulsar Heavy Industries transformed our approach to system
+          architecture. The solutions delivered were not only technically excellent but designed with future scaling in
+          mind."</p>
+        <p class="testimonial-source">— [Former Colleague/Client], [Position at Company]</p>
+      </div>
+    </div>
+
+    <h3>Work Process</h3>
+    <div class="process-steps">
+      <div class="process-step">
+        <strong>Discovery & Requirements</strong>
+        <p>Deep technical exploration of your challenges, constraints, and objectives to establish clear project
+          parameters and success metrics.</p>
+      </div>
+
+      <div class="process-step">
+        <strong>Architecture & Planning</strong>
+        <p>Development of comprehensive technical approach with clear deliverables, timelines, and implementation
+          strategy tailored to your specific needs.</p>
+      </div>
+
+      <div class="process-step">
+        <strong>Implementation & Integration</strong>
+        <p>Focused development with regular checkpoints, transparent progress tracking, and thoughtful integration with
+          your existing systems and team workflows.</p>
+      </div>
+
+      <div class="process-step">
+        <strong>Testing & Optimization</strong>
+        <p>Rigorous verification, performance analysis, and optimization to ensure solutions meet both functional
+          requirements and performance targets.</p>
+      </div>
+
+      <div class="process-step">
+        <strong>Documentation & Knowledge Transfer</strong>
+        <p>Comprehensive documentation and knowledge sharing to ensure your team has full understanding of the
+          implemented solutions.</p>
+      </div>
+    </div> -->
+
+    <h3>Engagement Models</h3>
+    <div class="engagement-models">
+      <div class="engagement-model">
+        <h4>Project-Based Consulting</h4>
+        <p>Defined scope, deliverables, and timeline with clear project phases and milestones.</p>
+        <p><strong>Ideal for:</strong> Implementation projects, system rebuilds, architecture design</p>
+        <p><strong>Typical duration:</strong> 2-6 months</p>
+      </div>
+
+      <div class="engagement-model">
+        <h4>Technical Advisory</h4>
+        <p>Ongoing expertise and guidance to enhance your technical decisions and strategy.</p>
+        <p><strong>Ideal for:</strong> Architecture reviews, technical direction, hiring support</p>
+        <p><strong>Typical arrangement:</strong> Monthly retainer with defined hours</p>
+      </div>
+
+      <div class="engagement-model">
+        <h4>Technical Audit</h4>
+        <p>In-depth analysis of existing systems with actionable recommendations for improvement.</p>
+        <p><strong>Ideal for:</strong> Performance issues, scaling challenges, security concerns</p>
+        <p><strong>Typical duration:</strong> 2-4 weeks</p>
+      </div>
+
+      <div class="engagement-model">
+        <h4>Extended Team Augmentation</h4>
+        <p>Seamless integration with your engineering team for ongoing development needs.</p>
+        <p><strong>Ideal for:</strong> Specialized expertise gaps, critical project acceleration</p>
+        <p><strong>Typical arrangement:</strong> Part-time or full-time, 3+ month commitment</p>
+      </div>
+    </div>
+
+    <div class="name-origin">
+      <h4>About the Name</h4>
+      <p>
+        "Pulsar" evokes precision, reliability, and the steady, powerful energy sources found in deep space—reflecting
+        the core engineering principles applied to every project. "Heavy Industries" signifies robust, foundational work
+        built to last, and pays homage to the influential hacker collective <a
+          href="https://en.wikipedia.org/wiki/L0pht" target="_blank">L0pht Heavy Industries</a>, pioneers in computer
+        security and responsible disclosure.
+      </p>
+    </div>
+
+  </section>
+
+  <div class="contact-section">
+    <div class="contact-cta">Ready to build something substantial?</div>
+    <p>Let's discuss your technical challenges and how we might solve them together.</p>
+    <p><a href="mailto:eran@pulsarheavyindustries.com" class="contact-email">eran@pulsarheavyindustries.com</a></p>
+  </div>
+
+  <footer>
+    &copy; 2025 Pulsar Heavy Industries LLC. All rights reserved.
+  </footer>
+
 </body>
+
 </html>
